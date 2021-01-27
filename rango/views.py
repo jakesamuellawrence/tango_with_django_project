@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.shortcuts import HttpResponse
-from django.shortcuts import reverse
+from django.shortcuts import render, HttpResponse, reverse
 
 def index(request):
-    return HttpResponse("Rango says hey there partner! <a href=\"/rango/about/\">About</a>")
+    context = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
+    return render(request, 'rango/index.html', context=context)
 
 def about(request):
     return HttpResponse("Rango says here is the about page. <a href=\"/rango/\">Index</a>")
