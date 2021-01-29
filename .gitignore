@@ -1,3 +1,6 @@
+# VScode config files
+.vscode/*
+
 # Tests
 tests_chapter*.py
 
